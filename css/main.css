@@ -979,7 +979,7 @@ pre .javascript .function {
 }
 .header {
   background: #f5f5f5 url("../images/header_a.png") center 8px no-repeat;
-  background-size: 6%;
+  background-size: 86px;
 }
 .header-inner {
   position: relative;
@@ -1684,7 +1684,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff25;
+  background: #dfc2a2;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2494,4 +2494,12 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+.c_category .title {
+  text-align: left;
+  padding-left: 50px;
+}
+.c_category ul li {
+  text-align: left;
+  padding-left: 30px;
 }
