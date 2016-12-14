@@ -1800,7 +1800,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8295ff;
+  background: #0ffe2f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2947,13 +2947,32 @@ body {
 }
 .c_category .title {
   text-align: left;
-  padding-left: 50px;
+  padding-left: 38px;
 }
 .c_category ul li {
   text-align: left;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 .c_category .category-list-count {
   padding-left: 10px;
   font-weight: bold;
+}
+.c_rp p {
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 17px;
+}
+.c_rp .ds-top-threads {
+  width: 100%;
+  clear: both;
+  height: 84px;
+}
+.c_rp li {
+  width: 45%;
+  overflow: hidden;
+  float: left;
+  margin-left: 4%;
+  line-height: 31px;
+  height: 31px;
 }
