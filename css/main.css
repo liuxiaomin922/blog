@@ -1800,7 +1800,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #faffff;
+  background: #984d13;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2975,4 +2975,12 @@ body {
   margin-left: 4%;
   line-height: 31px;
   height: 31px;
+}
+.posts-expand .post-meta {
+  margin: 3px 0 36px 0;
+}
+.posts-expand .post-eof {
+  margin: 50px auto 45px;
+  width: 77%;
+  background: #e0e0e0;
 }
