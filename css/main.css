@@ -1684,7 +1684,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4effab;
+  background: #b50813;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2502,4 +2502,8 @@ embed {
 .c_category ul li {
   text-align: left;
   padding-left: 30px;
+}
+.c_category .category-list-count {
+  padding-left: 10px;
+  font-weight: bold;
 }

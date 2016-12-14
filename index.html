@@ -284,7 +284,7 @@
               
                 
                 <a class="post-title-link" href="/2016/12/14/git-guide.html" itemprop="url">
-                  Git操作手册|备忘
+                  Git操作手册|命令速查表
                 </a>
               
             
@@ -298,7 +298,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-14T09:53:15+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-14T10:08:14+08:00">
                 2016-12-14
               </time>
             
@@ -367,8 +367,7 @@
 <li>Git常用命令</li>
 <li>Git进阶指南</li>
 </ol>
-<p>##Git与SVN差异</p>
-<p>Git的第一个版本是Linux之父Linus Torvalds亲手操刀设计和实现的,Git 基于 DAG 结构 (Directed Acyclic Graph)，其运行起来相当的快,它已经是现在的主流。</p>
+<h2 id="Git与SVN差异"><a href="#Git与SVN差异" class="headerlink" title="Git与SVN差异"></a>Git与SVN差异</h2><p>Git的第一个版本是Linux之父Linus Torvalds亲手操刀设计和实现的,Git 基于 DAG 结构 (Directed Acyclic Graph)，其运行起来相当的快,它已经是现在的主流。</p>
 <p>Git 和 SVN 思想最大的差别有四个：</p>
 <ul>
 <li>去中心化</li>
@@ -376,7 +375,7 @@
 <li>不一样的分支概念</li>
 <li>三个文件状态</li>
 </ul>
-<p><strong>去中心化</strong></p>
+<p><strong> 去中心化 </strong></p>
 <p>Git是一个DVCS（分布式版本管理系统），在技术层面上并不存在一个像中心仓库这样的东西 ， 所有的数据都在本地，不存在谁是中心</p>
 <p><img src="/images/images/git.gif" alt=""></p>
 <p>图中每个开发者拉取(pull)并推送(push)到origin。但除了这种集中式的推送拉取关系，每个开发者也可能会从其他的开发者处拉取代码的变更，从技术上讲，这意味着Alice定义了一个名为bob的Git的remote，它指向了Bob的软件仓库。反之亦然。</p>
@@ -396,14 +395,11 @@
 <li>已修改（modified）：修改了某个文件，但还没有保存</li>
 <li>已暂存（staged）：把已修改的文件放下下次保存的清单中</li>
 </ul>
-<p>##Git常用命令</p>
-<p>###创建</p>
-<p>复制一个已创建的仓库:</p>
+<h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><p>复制一个已创建的仓库:</p>
 <pre><code>$ git clone ssh://user@domain.com/repo.git
 </code></pre><p>创建一个新的本地仓库:</p>
 <pre><code>$ git init
-</code></pre><p>###本地修改</p>
-<p>显示工作路径下已修改的文件：</p>
+</code></pre><h3 id="本地修改"><a href="#本地修改" class="headerlink" title="本地修改"></a>本地修改</h3><p>显示工作路径下已修改的文件：</p>
 <pre><code>$ git status
 </code></pre><p>显示与上次提交版本文件的不同：</p>
 <pre><code>$ git diff
@@ -419,20 +415,17 @@
 <pre><code>$ git commit -m &apos;message here&apos;
 </code></pre><p>提交，并将提交时间设置为之前的某个日期:</p>
 <pre><code>git commit --date=&quot;`date --date=&apos;n day ago&apos;`&quot; -am &quot;Commit Message&quot;
-</code></pre><p>###修改上次提交</p>
-<p>请勿修改已发布的提交记录!</p>
+</code></pre><h3 id="修改上次提交"><a href="#修改上次提交" class="headerlink" title="修改上次提交"></a>修改上次提交</h3><p>请勿修改已发布的提交记录!</p>
 <pre><code>$ git commit --amend
 </code></pre><p>把当前分支中未提交的修改移动到其他分支</p>
 <pre><code>git stash
 git checkout branch2
 git stash pop
-</code></pre><p>###搜索</p>
-<p>从当前目录的所有文件中查找文本内容：</p>
+</code></pre><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>从当前目录的所有文件中查找文本内容：</p>
 <pre><code>$ git grep &quot;Hello&quot;
 </code></pre><p>在某一版本中搜索文本：</p>
 <pre><code>$ git grep &quot;Hello&quot; v2.5
-</code></pre><p>###提交历史</p>
-<p>从最新提交开始，显示所有的提交记录（显示hash， 作者信息，提交的标题和时间）：</p>
+</code></pre><h3 id="提交历史"><a href="#提交历史" class="headerlink" title="提交历史"></a>提交历史</h3><p>从最新提交开始，显示所有的提交记录（显示hash， 作者信息，提交的标题和时间）：</p>
 <pre><code>$ git log
 </code></pre><p>显示所有提交（仅显示提交的hash和message）：</p>
 <pre><code>$ git log --oneline
@@ -442,8 +435,7 @@ git stash pop
 <pre><code>$ git log -p &lt;file&gt;
 </code></pre><p>谁，在什么时间，修改了文件的什么内容：</p>
 <pre><code>$ git blame &lt;file&gt;
-</code></pre><p>###分支与标签</p>
-<p>列出所有的分支：</p>
+</code></pre><h3 id="分支与标签"><a href="#分支与标签" class="headerlink" title="分支与标签"></a>分支与标签</h3><p>列出所有的分支：</p>
 <pre><code>$ git branch
 </code></pre><p>切换分支：</p>
 <pre><code>$ git checkout &lt;branch&gt;
@@ -457,8 +449,7 @@ git stash pop
 <pre><code>$ git branch -d &lt;branch&gt;
 </code></pre><p>给当前版本打标签：</p>
 <pre><code>$ git tag &lt;tag-name&gt;
-</code></pre><p>###更新与发布</p>
-<p>列出当前配置的远程端：</p>
+</code></pre><h3 id="更新与发布"><a href="#更新与发布" class="headerlink" title="更新与发布"></a>更新与发布</h3><p>列出当前配置的远程端：</p>
 <pre><code>$ git remote -v
 </code></pre><p>显示远程端的信息：</p>
 <pre><code>$ git remote show &lt;remote&gt;
@@ -478,8 +469,7 @@ git stash pop
 git push &lt;remote&gt; --delete &lt;branch&gt; (since Git v1.7.0)
 </code></pre><p>发布标签:</p>
 <pre><code>$ git push --tags
-</code></pre><p>###合并与重置</p>
-<p>将分支合并到当前HEAD中：</p>
+</code></pre><h3 id="合并与重置"><a href="#合并与重置" class="headerlink" title="合并与重置"></a>合并与重置</h3><p>将分支合并到当前HEAD中：</p>
 <pre><code>$ git merge &lt;branch&gt;
 </code></pre><p>将当前HEAD版本重置到分支中:<br>请勿重置已发布的提交!</p>
 <pre><code>$ git rebase &lt;branch&gt;
@@ -492,8 +482,7 @@ git push &lt;remote&gt; --delete &lt;branch&gt; (since Git v1.7.0)
 </code></pre><p>在编辑器中手动解决冲突后，标记文件为已解决冲突</p>
 <pre><code>$ git add &lt;resolved-file&gt;
 $ git rm &lt;resolved-file&gt;
-</code></pre><p>###撤销</p>
-<p>放弃工作目录下的所有修改：</p>
+</code></pre><h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><p>放弃工作目录下的所有修改：</p>
 <pre><code>$ git reset --hard HEAD
 </code></pre><p>移除缓存区的所有文件（i.e. 撤销上次git add）:</p>
 <pre><code>$ git reset HEAD
@@ -507,19 +496,13 @@ $ git rm &lt;resolved-file&gt;
 <pre><code>$ git reset &lt;commit&gt;
 </code></pre><p>将HEAD重置到上一次提交的版本，并保留未提交的本地修改：</p>
 <pre><code>$ git reset --keep &lt;commit&gt;
-</code></pre><p>##Git进阶指南</p>
-<p>###问：如何修改 origin 仓库信息？</p>
-<p>####1、添加 origin 仓库信息</p>
-<pre><code>git remote add origin &lt;git仓库地址&gt;
-</code></pre><p>####2、查看 origin 仓库信息</p>
-<pre><code># 以下三种方式均可
+</code></pre><h2 id="Git进阶指南"><a href="#Git进阶指南" class="headerlink" title="Git进阶指南"></a>Git进阶指南</h2><h3 id="问：如何修改-origin-仓库信息？"><a href="#问：如何修改-origin-仓库信息？" class="headerlink" title="问：如何修改 origin 仓库信息？"></a>问：如何修改 origin 仓库信息？</h3><h4 id="1、添加-origin-仓库信息"><a href="#1、添加-origin-仓库信息" class="headerlink" title="1、添加 origin 仓库信息"></a>1、添加 origin 仓库信息</h4><pre><code>git remote add origin &lt;git仓库地址&gt;
+</code></pre><h4 id="2、查看-origin-仓库信息"><a href="#2、查看-origin-仓库信息" class="headerlink" title="2、查看 origin 仓库信息"></a>2、查看 origin 仓库信息</h4><pre><code># 以下三种方式均可
 git config get --remote.origin.url
 git remote -v
 git remote show origin
-</code></pre><p>####3、删除 origin 仓库信息</p>
-<pre><code>git remote rm origin
-</code></pre><p>###问：如何配置 git ssh keys ？</p>
-<p>在本地生成 ssh 私钥 / 公钥 文件<br>将「公钥」添加到 git 服务（github、gitlab、coding.net 等）网站后台<br>测试 git ssh 连接是否成功<br>接下来以添加 github ssh keys 为例，请注意替换 github 文件名。</p>
+</code></pre><h4 id="3、删除-origin-仓库信息"><a href="#3、删除-origin-仓库信息" class="headerlink" title="3、删除 origin 仓库信息"></a>3、删除 origin 仓库信息</h4><pre><code>git remote rm origin
+</code></pre><h3 id="问：如何配置-git-ssh-keys-？"><a href="#问：如何配置-git-ssh-keys-？" class="headerlink" title="问：如何配置 git ssh keys ？"></a>问：如何配置 git ssh keys ？</h3><p>在本地生成 ssh 私钥 / 公钥 文件<br>将「公钥」添加到 git 服务（github、gitlab、coding.net 等）网站后台<br>测试 git ssh 连接是否成功<br>接下来以添加 github ssh keys 为例，请注意替换 github 文件名。</p>
 <p>注：如果对密钥机制不熟悉，建议不要指定 -f 参数，直接使用默认的 id_rsa 文件名。</p>
 <pre><code># 运行以下命令，一直回车，文件名可随意指定
 ssh-keygen -t rsa -b 4096 -C &quot;kaiye@macbook&quot; -f ~/.ssh/github
@@ -532,33 +515,25 @@ cat ~/.ssh/github.pub
 
 # 测试 git ssh 是否连接成功
 ssh -T git@github.com
-</code></pre><p>###问：如何撤销修改？</p>
-<p>  修改包含四种情况，需单独区分。</p>
-<p>####1、新建的文件和目录，且从未提交至版本库</p>
-<p>  此类文件的状态为 Untracked files ，撤销方法如下：</p>
+</code></pre><h3 id="问：如何撤销修改？"><a href="#问：如何撤销修改？" class="headerlink" title="问：如何撤销修改？"></a>问：如何撤销修改？</h3><p>  修改包含四种情况，需单独区分。</p>
+<h4 id="1、新建的文件和目录，且从未提交至版本库"><a href="#1、新建的文件和目录，且从未提交至版本库" class="headerlink" title="1、新建的文件和目录，且从未提交至版本库"></a>1、新建的文件和目录，且从未提交至版本库</h4><p>  此类文件的状态为 Untracked files ，撤销方法如下：</p>
 <pre><code>git clean -fd .
 </code></pre><p>其中，. 表示当前目录及所有子目录中的文件，也可以直接指定对应的文件路径，以下其他情况类似。</p>
-<p>####2、提交过版本库，但未提交至暂存区的文件（未执行 git add）</p>
-<p>  此类文件的状态为<code>Changes not staged for commit</code>，撤销方法：</p>
+<h4 id="2、提交过版本库，但未提交至暂存区的文件（未执行-git-add）"><a href="#2、提交过版本库，但未提交至暂存区的文件（未执行-git-add）" class="headerlink" title="2、提交过版本库，但未提交至暂存区的文件（未执行 git add）"></a>2、提交过版本库，但未提交至暂存区的文件（未执行 git add）</h4><p>  此类文件的状态为<code>Changes not staged for commit</code>，撤销方法：</p>
 <pre><code>git checkout .
-</code></pre><p>####3、已提交至暂存区的文件</p>
-<p>  此类文件的状态为 Changes to be committed，撤销方法：</p>
+</code></pre><h4 id="3、已提交至暂存区的文件"><a href="#3、已提交至暂存区的文件" class="headerlink" title="3、已提交至暂存区的文件"></a>3、已提交至暂存区的文件</h4><p>  此类文件的状态为 Changes to be committed，撤销方法：</p>
 <pre><code>git reset .
 </code></pre><p>执行之后文件将会回到以上的 1 或者 2 状态，可继续按以上步骤执行撤销，若 git reset 同时加上 –hard 参数，将会把修改过的文件也还原成版本库中的版本。</p>
-<p>####4、已提交至版本库（执行了 git commit）</p>
-<p>  每次提交都会生成一个 hash 版本号，通过以下命令可查阅版本号并将其回滚：</p>
+<h4 id="4、已提交至版本库（执行了-git-commit）"><a href="#4、已提交至版本库（执行了-git-commit）" class="headerlink" title="4、已提交至版本库（执行了 git commit）"></a>4、已提交至版本库（执行了 git commit）</h4><p>  每次提交都会生成一个 hash 版本号，通过以下命令可查阅版本号并将其回滚：</p>
 <pre><code>git log
 git reset &lt;版本号&gt;
 </code></pre><p>如果需要「回滚至上一次提交」，可直接使用以下命令：</p>
 <pre><code>git reset head~1
 </code></pre><p>执行之后，再按照 1 或者 2 状态进行处理即可，如果回滚之后的代码同时需要提交至 origin 仓库（即回滚 origin 线上仓库的代码），需要使用 -f 强制提交参数，且当前用户需要具备「强制提交的权限」。</p>
-<p>####5、如果回滚了之后又不想回滚了怎么办？</p>
-<p>  如果是以上的情况 1 或者 2，只能歇屁了，因为修改没入过版本库，无法回滚。</p>
+<h4 id="5、如果回滚了之后又不想回滚了怎么办？"><a href="#5、如果回滚了之后又不想回滚了怎么办？" class="headerlink" title="5、如果回滚了之后又不想回滚了怎么办？"></a>5、如果回滚了之后又不想回滚了怎么办？</h4><p>  如果是以上的情况 1 或者 2，只能歇屁了，因为修改没入过版本库，无法回滚。</p>
 <p>  如果是情况 4，回滚之后通过 git log 将看不到回滚之前的版本号，但可通过 git reflog 命令（所有使用过的版本号）找到回滚之前的版本号，然后 git reset &lt;版本号&gt; 。</p>
-<p>###问：遇到冲突了怎么解决？</p>
-<p>  两个分支进行合并时（通常是 git pull 时），可能会遇到冲突，同时被修改的文件会进入 Unmerged 状态，需要解决冲突。</p>
-<p>####1、最快的办法</p>
-<p>  大部分时候，「最快解决冲突」的办法是：使用当前 HEAD 的版本（ours），或使用合并进来的分支版本（theirs）。</p>
+<h3 id="问：遇到冲突了怎么解决？"><a href="#问：遇到冲突了怎么解决？" class="headerlink" title="问：遇到冲突了怎么解决？"></a>问：遇到冲突了怎么解决？</h3><p>  两个分支进行合并时（通常是 git pull 时），可能会遇到冲突，同时被修改的文件会进入 Unmerged 状态，需要解决冲突。</p>
+<h4 id="1、最快的办法"><a href="#1、最快的办法" class="headerlink" title="1、最快的办法"></a>1、最快的办法</h4><p>  大部分时候，「最快解决冲突」的办法是：使用当前 HEAD 的版本（ours），或使用合并进来的分支版本（theirs）。</p>
 <pre><code># 使用当前分支 HEAD 版本，通常是冲突源文件的 &lt;&lt;&lt;&lt;&lt;&lt;&lt; 标记部分，======= 的上方
 git checkout --ours &lt;文件名&gt;
 
@@ -567,13 +542,10 @@ git checkout --ours &lt;文件名&gt;
 
 # 标记为解决状态加入暂存区
 git add &lt;文件名&gt;
-</code></pre><p>####2、最通用的办法</p>
-<p>  用编辑器打开冲突的源文件进行修改，可能会发生遗留，且体验不好，通常需要借助 git mergetool 命令。</p>
+</code></pre><h4 id="2、最通用的办法"><a href="#2、最通用的办法" class="headerlink" title="2、最通用的办法"></a>2、最通用的办法</h4><p>  用编辑器打开冲突的源文件进行修改，可能会发生遗留，且体验不好，通常需要借助 git mergetool 命令。</p>
 <p>  在 Mac 系统下，运行 git mergetool &lt;文件名&gt; 可以开启配置的第三方工具进行 merge，默认的是 FileMerge 应用程序，还可以配置成 Meld 或 kdiff3，体验更佳。</p>
-<p>####3、最好的习惯</p>
-<p>  有三个好的习惯，可以减少代码的冲突：<br> 在开始修改代码前先 git pull 一下；<br>  将业务代码进行划分，尽量不要多个人在同一时间段修改同一文件；<br>  通过Gitflow 工作流也可以提升 git流程效率，减少发生冲突的可能性。</p>
-<p>####4、最复杂的情况</p>
-<p>  如果你的项目周期比较长，还应该养成「定期 rebase 的习惯」，git pull –rebase 可以让分支的代码和 origin 仓库的代码保持兼容，同时还不会破坏线上代码的可靠性。</p>
+<h4 id="3、最好的习惯"><a href="#3、最好的习惯" class="headerlink" title="3、最好的习惯"></a>3、最好的习惯</h4><p>  有三个好的习惯，可以减少代码的冲突：<br> 在开始修改代码前先 git pull 一下；<br>  将业务代码进行划分，尽量不要多个人在同一时间段修改同一文件；<br>  通过Gitflow 工作流也可以提升 git流程效率，减少发生冲突的可能性。</p>
+<h4 id="4、最复杂的情况"><a href="#4、最复杂的情况" class="headerlink" title="4、最复杂的情况"></a>4、最复杂的情况</h4><p>  如果你的项目周期比较长，还应该养成「定期 rebase 的习惯」，git pull –rebase 可以让分支的代码和 origin 仓库的代码保持兼容，同时还不会破坏线上代码的可靠性。</p>
 <p>  它的大概原理是，先将 origin 仓库的代码按 origin 的时间流在本地分支中提交，再将本地分支的修改记录追加到 origin 分支上。如果发生冲突，则可以即时的发现问题并解决，否则到项目上线时再解决冲突，可能会发生额外的风险。</p>
 <p>  rebase 大概的操作步骤如下：</p>
 <pre><code># 将当前分支的版本追加到从远程 pull 回来的节点之后
@@ -587,8 +559,7 @@ git push origin
 
 # 若多次提交修改了同一文件，可能需要直接跳过后续提交，按提示操作即可
 git rebase --skip
-</code></pre><p>###问：如何在不提交修改的前提下，执行 pull / merge 等操作？</p>
-<p>  有些修改没有完全完成之前，可能不需要提交到版本库，圡方法是将修改的文件 copy 到 git 仓库之外的目录临时存放，pull / merge 操作完成之后，再 copy 回来。</p>
+</code></pre><h3 id="问：如何在不提交修改的前提下，执行-pull-merge-等操作？"><a href="#问：如何在不提交修改的前提下，执行-pull-merge-等操作？" class="headerlink" title="问：如何在不提交修改的前提下，执行 pull / merge 等操作？"></a>问：如何在不提交修改的前提下，执行 pull / merge 等操作？</h3><p>  有些修改没有完全完成之前，可能不需要提交到版本库，圡方法是将修改的文件 copy 到 git 仓库之外的目录临时存放，pull / merge 操作完成之后，再 copy 回来。</p>
 <p>  这样的做法一个是效率不高，另外一个可能会遗漏潜在的冲突。此类需求最好是通过 git stash 命令来完成，它可以将当前工作状态（WIP，work in progress）临时存放在 stash 队列中，待操作完成后再从 stash 队列中重新应用这些修改。</p>
 <p>  以下是 git stash 常用命令：</p>
 <pre><code># 查看 stash 队列中已暂存了多少 WIP
@@ -605,8 +576,7 @@ git stash pop stash@{num}
 
 # 恢复指定编号的 WIP，但不从队列中移除
 git stash apply stash@{num}
-</code></pre><p>###问：如何在 git log 中查看修改的文件列表？</p>
-<p>  默认的 git log 会显示较全的信息，且不包含文件列表。使用 –name-status 可以看到修改的文件列表，使用 –oneline 可以将参数简化成一行。</p>
+</code></pre><h3 id="问：如何在-git-log-中查看修改的文件列表？"><a href="#问：如何在-git-log-中查看修改的文件列表？" class="headerlink" title="问：如何在 git log 中查看修改的文件列表？"></a>问：如何在 git log 中查看修改的文件列表？</h3><p>  默认的 git log 会显示较全的信息，且不包含文件列表。使用 –name-status 可以看到修改的文件列表，使用 –oneline 可以将参数简化成一行。</p>
 <pre><code>git log --name-status --oneline
 </code></pre><p>  每次手动加上参数很麻烦，可以通过自定义快捷命令的方式来简化操作：</p>
 <pre><code>git config --global alias.ls &apos;log --name-status --oneline --graph&apos;
@@ -615,15 +585,13 @@ git stash apply stash@{num}
 </code></pre><p>  更多 git log 参数，可通过 git help log 查看手册。</p>
 <p>  如果是看上一次提交的版本日志，直接运行 git show 即可。</p>
 <p>  此外，如果你的 Mac 安装了zsh（参考《全新Mac安装指南（编程篇），那么可以直接使用 gst、glog 等一系列快捷命令，详情见此列表：Plugin:git 。</p>
-<p>###问：git submodule update 时出错怎么解决？</p>
-<p>  例如，在执行 git submodule update 时有以下错误信息：</p>
+<h3 id="问：git-submodule-update-时出错怎么解决？"><a href="#问：git-submodule-update-时出错怎么解决？" class="headerlink" title="问：git submodule update 时出错怎么解决？"></a>问：git submodule update 时出错怎么解决？</h3><p>  例如，在执行 git submodule update 时有以下错误信息：</p>
 <blockquote>
 <p>fatal: reference is not a tree: f869da471c5d8a185cd110bbe4842d6757b002f5<br>Unable to checkout ‘f869da471c5d8a185cd110bbe4842d6757b002f5’ in submodule path ‘source/i18n-php-server’</p>
 </blockquote>
 <p>  在此例中，发生以上错误是因为 i18n-php-server 子仓库在某电脑 A 的「本地」commit 了新的版本 「f869da471c5d8a185cd110bbe4842d6757b002f5」，且该次 commit 未 push origin。但其父级仓库 i18n-www 中引用了该子仓库的版本号，且将引用记录 push origin，导致其他客户机无法 update 。</p>
 <p>  解决方法，在电脑 A 上将 i18n-php-server 版本库 push origin 后，在其他客户机上执行 git submodule update 。或者用以上提到的 git reset 方法，将子仓库的引用版本号还原成 origin 上存在的最新版本号。</p>
-<p>###其他问题</p>
-<p>  设置本地分支与远程分支保持同步，在第一次 git push 的时候带上 -u 参数即可</p>
+<h3 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h3><p>  设置本地分支与远程分支保持同步，在第一次 git push 的时候带上 -u 参数即可</p>
 <pre><code>git push origin master -u 
 </code></pre><p>  支持中文目录与文件名的显示（git 默认将非 ASCII 编码的目录与文件名以八进制编码展示）</p>
 <pre><code>git config core.quotepath off
@@ -651,12 +619,7 @@ git merge branch1
 
 # 删除已完成合并的分支 branch1
 git branch -d branch1
-</code></pre><p>###参考资料</p>
-<ol>
-<li>Pro Git 简体中文版</li>
-<li>Git权威指南</li>
-<li>命令行man手册</li>
-</ol>
+</code></pre><p>[TOC]</p>
 
           
         
