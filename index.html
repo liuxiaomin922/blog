@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -100,13 +100,13 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -129,7 +129,7 @@
   <title> 小米前端技术博客 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -147,7 +147,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container one-collumn sidebar-position-right 
    page-home 
  ">
     <div class="headband"></div>
@@ -298,7 +298,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-14T10:37:30+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-14T16:17:02+08:00">
                 2016-12-14
               </time>
             
@@ -314,7 +314,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/转载/" itemprop="url" rel="index">
@@ -360,11 +360,12 @@
 
       
         
-          这篇文章主要介绍Git分布式版本管理与集中式管理的一些差异，总结下Git常用命令作为日后的速查表，最后介绍Git进阶的一些案例。 本文分为以下几个部分： 1. Git与SVN差异 2. Git常用命令 3. Git进阶指南
+          <p><img src="/img/git.jpg" alt="git"></p>
+<h2 id="Git与SVN差异"><a href="#Git与SVN差异" class="headerlink" title="Git与SVN差异"></a>Git与SVN差异</h2><p>Git的第一个版本是Linux之父Linus Torvalds亲手操刀设计和实现的,Git 基于 DAG 结构 (Directed Acyclic Graph)，其运行起来相当的快,它已经是现在的主流。<br>
           <!--noindex-->
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/14/git-guide.html">
-              Weiterlesen &raquo;
+            <a class="btn" href="/2016/12/14/git-guide.html#more" rel="contents">
+              阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -460,7 +461,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/转载/" itemprop="url" rel="index">
@@ -510,7 +511,7 @@
           <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/12/13/jekyll-to-hexo.html">
-              Weiterlesen &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -606,7 +607,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/HTML-CSS/" itemprop="url" rel="index">
@@ -652,11 +653,24 @@
 
       
         
-          测试下csdn的markdown编辑器.
+          
+          欢迎使用Markdown编辑器写博客本Markdown编辑器使用[StackEdit][6]修改而来，用它写博客，将会带来全新的体验哦：
+
+Markdown和扩展Markdown简洁的语法
+代码块高亮
+图片链接和图片上传
+LaTex数学公式
+丰富的快捷键
+
+-
+快捷键
+加粗    Ctrl + B
+
+          ...
           <!--noindex-->
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/10/markdown-grammar.html">
-              Weiterlesen &raquo;
+            <a class="btn" href="/2016/12/10/markdown-grammar.html#more" rel="contents">
+              阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -729,15 +743,15 @@
           <div class="site-state-item site-state-posts">
             <a href="/">
               <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
               
             </div>
           
@@ -745,8 +759,8 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -797,13 +811,13 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -869,6 +883,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
 
   
 

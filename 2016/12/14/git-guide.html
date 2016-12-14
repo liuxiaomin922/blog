@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -84,20 +84,21 @@
 
 
 
-<meta name="description" content="这篇文章主要介绍Git分布式版本管理与集中式管理的一些差异，总结下Git常用命令作为日后的速查表，最后介绍Git进阶的一些案例。 本文分为以下几个部分： 1. Git与SVN差异 2. Git常用命令 3. Git进阶指南">
+<meta name="description" content="Git与SVN差异Git的第一个版本是Linux之父Linus Torvalds亲手操刀设计和实现的,Git 基于 DAG 结构 (Directed Acyclic Graph)，其运行起来相当的快,它已经是现在的主流。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git操作手册|命令速查表">
 <meta property="og:url" content="http://0313.name/2016/12/14/git-guide.html">
 <meta property="og:site_name" content="小米前端技术博客">
-<meta property="og:description" content="这篇文章主要介绍Git分布式版本管理与集中式管理的一些差异，总结下Git常用命令作为日后的速查表，最后介绍Git进阶的一些案例。 本文分为以下几个部分： 1. Git与SVN差异 2. Git常用命令 3. Git进阶指南">
+<meta property="og:description" content="Git与SVN差异Git的第一个版本是Linux之父Linus Torvalds亲手操刀设计和实现的,Git 基于 DAG 结构 (Directed Acyclic Graph)，其运行起来相当的快,它已经是现在的主流。">
+<meta property="og:image" content="http://0313.name/img/git.jpg">
 <meta property="og:image" content="http://0313.name/images/images/git.gif">
 <meta property="og:image" content="http://0313.name/images/images/svn.png">
 <meta property="og:image" content="http://0313.name/images/images/gitgit.png">
-<meta property="og:updated_time" content="2016-12-14T02:37:30.000Z">
+<meta property="og:updated_time" content="2016-12-14T08:17:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git操作手册|命令速查表">
-<meta name="twitter:description" content="这篇文章主要介绍Git分布式版本管理与集中式管理的一些差异，总结下Git常用命令作为日后的速查表，最后介绍Git进阶的一些案例。 本文分为以下几个部分： 1. Git与SVN差异 2. Git常用命令 3. Git进阶指南">
-<meta name="twitter:image" content="http://0313.name/images/images/git.gif">
+<meta name="twitter:description" content="Git与SVN差异Git的第一个版本是Linux之父Linus Torvalds亲手操刀设计和实现的,Git 基于 DAG 结构 (Directed Acyclic Graph)，其运行起来相当的快,它已经是现在的主流。">
+<meta name="twitter:image" content="http://0313.name/img/git.jpg">
 
 
 
@@ -105,13 +106,13 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -134,7 +135,7 @@
   <title> Git操作手册|命令速查表 | 小米前端技术博客 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -152,7 +153,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -298,7 +299,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-14T10:37:30+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-14T16:17:02+08:00">
                 2016-12-14
               </time>
             
@@ -314,7 +315,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/转载/" itemprop="url" rel="index">
@@ -347,10 +348,6 @@
           
 
           
-              <div class="post-description">
-                  这篇文章主要介绍Git分布式版本管理与集中式管理的一些差异，总结下Git常用命令作为日后的速查表，最后介绍Git进阶的一些案例。 本文分为以下几个部分： 1. Git与SVN差异 2. Git常用命令 3. Git进阶指南
-              </div>
-          
 
         </div>
       </header>
@@ -363,8 +360,8 @@
       
 
       
-        <h2 id="Git与SVN差异"><a href="#Git与SVN差异" class="headerlink" title="Git与SVN差异"></a>Git与SVN差异</h2><p>Git的第一个版本是Linux之父Linus Torvalds亲手操刀设计和实现的,Git 基于 DAG 结构 (Directed Acyclic Graph)，其运行起来相当的快,它已经是现在的主流。</p>
-<p>Git 和 SVN 思想最大的差别有四个：</p>
+        <p><img src="/img/git.jpg" alt="git"></p>
+<h2 id="Git与SVN差异"><a href="#Git与SVN差异" class="headerlink" title="Git与SVN差异"></a>Git与SVN差异</h2><p>Git的第一个版本是Linux之父Linus Torvalds亲手操刀设计和实现的,Git 基于 DAG 结构 (Directed Acyclic Graph)，其运行起来相当的快,它已经是现在的主流。<br><a id="more"></a><br>Git 和 SVN 思想最大的差别有四个：</p>
 <ul>
 <li>去中心化</li>
 <li>直接记录快照，而非差异</li>
@@ -630,6 +627,27 @@ git branch -d branch1
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>千言万语,不及您一个红包让我提神,充满原创的欲望!</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wx.jpg" alt="xiaomi WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zfb.jpg" alt="xiaomi Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -671,12 +689,36 @@ git branch -d branch1
 
     <div class="post-spread">
       
+        <div class="ds-share flat" data-thread-key="2016/12/14/git-guide.html"
+     data-title="Git操作手册|命令速查表"
+     data-content=""
+     data-url="http://0313.name/2016/12/14/git-guide.html">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
     </div>
   </div>
 
 
           </div>
           
+
+<div class="c_rp">
+  <p >热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="8"></div>
+</div>
 
 
           
@@ -709,10 +751,10 @@ git branch -d branch1
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -729,15 +771,15 @@ git branch -d branch1
           <div class="site-state-item site-state-posts">
             <a href="/">
               <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
               
             </div>
           
@@ -745,8 +787,8 @@ git branch -d branch1
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -813,13 +855,13 @@ git branch -d branch1
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -885,6 +927,13 @@ git branch -d branch1
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>

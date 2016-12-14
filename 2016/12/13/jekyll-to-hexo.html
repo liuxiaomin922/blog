@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://0313.name/2016/12/13/jekyll-to-hexo.html">
 <meta property="og:site_name" content="小米前端技术博客">
 <meta property="og:description" content="个人博客以前由jekyll搭建，主要问题是目录、Rss、sitemap无法自动生成，根据DRY的原则在网上找了下答案，最终发现了用Hexo来搭建博客的方法，配置完之后一劳永逸，目录、Rss和sitemap都是自动生成，解决了我之前的困惑。">
-<meta property="og:updated_time" content="2016-12-14T02:37:55.000Z">
+<meta property="og:updated_time" content="2016-12-14T04:23:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jekyll迁移到Hexo搭建个人博客">
 <meta name="twitter:description" content="个人博客以前由jekyll搭建，主要问题是目录、Rss、sitemap无法自动生成，根据DRY的原则在网上找了下答案，最终发现了用Hexo来搭建博客的方法，配置完之后一劳永逸，目录、Rss和sitemap都是自动生成，解决了我之前的困惑。">
@@ -101,13 +101,13 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -130,7 +130,7 @@
   <title> Jekyll迁移到Hexo搭建个人博客 | 小米前端技术博客 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -148,7 +148,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -310,7 +310,7 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/转载/" itemprop="url" rel="index">
@@ -376,10 +376,14 @@
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &quot;postName&quot; #新建文章</div></pre></td></tr></table></figure>
 <blockquote>
-<p>其中layout是可选参数，默认值为post。有哪些layout呢，请到scaffolds目录下查看，这些文件名称就是layout名称。当然你可以添加自己的layout，方法就是添加一个文件即可，同时你也可以编辑现有的layout，比如post的layout默认是hexo\scaffolds\post.md<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: &#123; &#123; title &#125; &#125;</div><div class="line">date: &#123; &#123; date &#125; &#125;</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>其中layout是可选参数，默认值为post。有哪些layout呢，请到scaffolds目录下查看，这些文件名称就是layout名称。当然你可以添加自己的layout，方法就是添加一个文件即可，同时你也可以编辑现有的layout，比如post的layout默认是hexo\scaffolds\post.md</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: &#123; &#123; title &#125; &#125;</div><div class="line">date: &#123; &#123; date &#125; &#125;</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
+<blockquote>
 <p>请注意，大括号与大括号之间我多加了个空格，否则会被转义，不能正常显示。</p>
 </blockquote>
-<p>我想添加categories，以免每次手工输入，只需要修改这个文件添加一行，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: &#123; &#123; title &#125; &#125;</div><div class="line">date: &#123; &#123; date &#125; &#125;</div><div class="line">categories: </div><div class="line">tags: </div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>我想添加categories，以免每次手工输入，只需要修改这个文件添加一行，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: &#123; &#123; title &#125; &#125;</div><div class="line">date: &#123; &#123; date &#125; &#125;</div><div class="line">categories: </div><div class="line">tags: </div><div class="line">---</div></pre></td></tr></table></figure>
 <p>更多信息参考: Writing[<a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">http://hexo.io/docs/writing.html</a>]</p>
 <h2 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
 <h2 id="生成静态站点文件"><a href="#生成静态站点文件" class="headerlink" title="生成静态站点文件"></a>生成静态站点文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate # 或者hexo g</div></pre></td></tr></table></figure>
@@ -391,6 +395,32 @@
 <p>然后输入：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy # 或者 hexo d</div></pre></td></tr></table></figure>
 <p>参考: Deployment[<a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">http://hexo.io/docs/deployment.html</a>]</p>
+<h1 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h1><p>本博客采用了iissnan的Next主题，他的博客有详细的安装教程，这里贴下链接next，有需要的朋友直接参考他写的教程，一气呵成~</p>
+<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd hexo目录</div><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<h2 id="应用Hexo主题"><a href="#应用Hexo主题" class="headerlink" title="应用Hexo主题"></a>应用Hexo主题</h2><p>在hexo目录下找到_config.yml配置文件，找到 theme 字段，并将其值更改为 next，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: next</div></pre></td></tr></table></figure>
+<h2 id="设置RSS"><a href="#设置RSS" class="headerlink" title="设置RSS"></a>设置RSS</h2><p>在上面的步骤中已经安装了Rss插件，只要要在themes\next_config.yml配置文件中添加如下一行即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rss：</div></pre></td></tr></table></figure>
+<h2 id="添加标签tags页面"><a href="#添加标签tags页面" class="headerlink" title="添加标签tags页面"></a>添加标签tags页面</h2><p>定位到 Hexo 站点目录下，使用 hexo new page 新建一个页面，命名为 tags，布局格式为page：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd hexo目录</div><div class="line">$ hexo new page tags</div></pre></td></tr></table></figure>
+<p>内容如下所示，如果要关闭tags页面的评论可以设置comments为false：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: 标签</div><div class="line">date: 2014-12-22 12:39:04</div><div class="line">type: &quot;tags&quot;</div><div class="line">comments: false</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>这样以后tags页面在每次执行hexo generate后自动更新。</p>
+<h2 id="添加分类页面"><a href="#添加分类页面" class="headerlink" title="添加分类页面"></a>添加分类页面</h2><p>和上面的一样，在hexo目录下执行下面命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page categories</div></pre></td></tr></table></figure>
+<p>内容为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: 分类</div><div class="line">date: 2014-12-22 12:39:04</div><div class="line">type: &quot;categories&quot;</div><div class="line">comments: false</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<h2 id="添加404页面"><a href="#添加404页面" class="headerlink" title="添加404页面"></a>添加404页面</h2><p>新建一个404.html文件，放到themes\next\source目录下，内容你自己定。</p>
+<h1 id="第三方服务"><a href="#第三方服务" class="headerlink" title="第三方服务"></a>第三方服务</h1><h2 id="多说评论"><a href="#多说评论" class="headerlink" title="多说评论"></a>多说评论</h2><p>登录多说官网，登录后点我要安装，然后填写站点相关信息，最主要的是duoshuo_shortname这个字段，设置后之后修改themes\next_config.yml文件，把duoshuo_shortname改成你的，如下所示：</p>
+<blockquote>
+<p>目前多说的shortname 是你设置的域名自定义的部分,比如 xxx.duoshuo.con,那么你的shortname就是 <code>xxx</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">duoshuo_shortname: xxx</div></pre></td></tr></table></figure>
+<h2 id="百度统计"><a href="#百度统计" class="headerlink" title="百度统计"></a>百度统计</h2><p>登录百度统计，转到获取代码截面，找到百度统计脚本id，然后把themes\next_config.yml文件下的baidu_analytics字段改成你的id，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">baidu_analytics: 340874ba9357cbe81570aa4ac1185941</div></pre></td></tr></table></figure>
+<h2 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h2><p>next主题集成了swiftype搜索，你需要到swiftype配置一个搜索引擎， 而后编辑 站点配置文件， 新增 swiftype_key 字段，值为你的 swiftype 搜索引擎的 key。 详细的配置请参考：swfitype教程</p>
+<h2 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h2><blockquote>
+<p>其他设置比如侧边栏、友情链接、菜单栏等请参考next主题配置教程 [<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a>]</p>
+</blockquote>
+<p>转载自:[<a href="http://www.ezlippi.com/blog/2016/02/jekyll-to-hexo.html" target="_blank" rel="external">http://www.ezlippi.com/blog/2016/02/jekyll-to-hexo.html</a>] 内容部分做了删减和修改,感谢作者,如有侵权请联系我</p>
 <p>[TOC]</p>
 
       
@@ -406,6 +436,27 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>千言万语,不及您一个红包让我提神,充满原创的欲望!</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wx.jpg" alt="xiaomi WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/zfb.jpg" alt="xiaomi Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -451,12 +502,36 @@
 
     <div class="post-spread">
       
+        <div class="ds-share flat" data-thread-key="2016/12/13/jekyll-to-hexo.html"
+     data-title="Jekyll迁移到Hexo搭建个人博客"
+     data-content=""
+     data-url="http://0313.name/2016/12/13/jekyll-to-hexo.html">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
     </div>
   </div>
 
 
           </div>
           
+
+<div class="c_rp">
+  <p >热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="8"></div>
+</div>
 
 
           
@@ -489,10 +564,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -509,15 +584,15 @@
           <div class="site-state-item site-state-posts">
             <a href="/">
               <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">分类</span>
               
             </div>
           
@@ -525,8 +600,8 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -563,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从Jekyll迁移到Hexo"><span class="nav-number">1.</span> <span class="nav-text">从Jekyll迁移到Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo常用的几个命令"><span class="nav-number">2.</span> <span class="nav-text">Hexo常用的几个命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建新博文"><span class="nav-number">2.1.</span> <span class="nav-text">创建新博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行服务器"><span class="nav-number">2.2.</span> <span class="nav-text">运行服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成静态站点文件"><span class="nav-number">2.3.</span> <span class="nav-text">生成静态站点文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Git"><span class="nav-number">2.4.</span> <span class="nav-text">部署到Git</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从Jekyll迁移到Hexo"><span class="nav-number">1.</span> <span class="nav-text">从Jekyll迁移到Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo常用的几个命令"><span class="nav-number">2.</span> <span class="nav-text">Hexo常用的几个命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建新博文"><span class="nav-number">2.1.</span> <span class="nav-text">创建新博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行服务器"><span class="nav-number">2.2.</span> <span class="nav-text">运行服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成静态站点文件"><span class="nav-number">2.3.</span> <span class="nav-text">生成静态站点文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Git"><span class="nav-number">2.4.</span> <span class="nav-text">部署到Git</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题设置"><span class="nav-number">3.</span> <span class="nav-text">主题设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载主题"><span class="nav-number">3.1.</span> <span class="nav-text">下载主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用Hexo主题"><span class="nav-number">3.2.</span> <span class="nav-text">应用Hexo主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置RSS"><span class="nav-number">3.3.</span> <span class="nav-text">设置RSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加标签tags页面"><span class="nav-number">3.4.</span> <span class="nav-text">添加标签tags页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加分类页面"><span class="nav-number">3.5.</span> <span class="nav-text">添加分类页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加404页面"><span class="nav-number">3.6.</span> <span class="nav-text">添加404页面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三方服务"><span class="nav-number">4.</span> <span class="nav-text">第三方服务</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多说评论"><span class="nav-number">4.1.</span> <span class="nav-text">多说评论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#百度统计"><span class="nav-number">4.2.</span> <span class="nav-text">百度统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#站内搜索"><span class="nav-number">4.3.</span> <span class="nav-text">站内搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他设置"><span class="nav-number">4.4.</span> <span class="nav-text">其他设置</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -593,13 +668,13 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -665,6 +740,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
